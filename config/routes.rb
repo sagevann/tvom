@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :expenses
+
   resources :time_horizons
 
   devise_for :admin_users, ActiveAdmin::Devise.config
