@@ -1,4 +1,5 @@
 ActiveAdmin.register TimeHorizons do
+  permit_params :year_a, :year_b, :year_c, :year_d
 
   
   # See permitted parameters documentation:
