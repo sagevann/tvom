@@ -1,0 +1,31 @@
+<h1>Listing time_horizons</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Year a</th>
+      <th>Year b</th>
+      <th>Year c</th>
+      <th>Year d</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @time_horizons.each do |time_horizon| %>
+      <tr>
+        <td><%= time_horizon.year_a %></td>
+        <td><%= time_horizon.year_b %></td>
+        <td><%= time_horizon.year_c %></td>
+        <td><%= time_horizon.year_d %></td>
+        <td><%= link_to 'Show', time_horizon %></td>
+        <td><%= link_to 'Edit', edit_time_horizon_path(time_horizon) %></td>
+        <td><%= link_to 'Destroy', time_horizon, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Time horizon', new_time_horizon_path %>

@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Year a:</strong>
+  <%= @time_horizon.year_a %>
+</p>
+
+<p>
+  <strong>Year b:</strong>
+  <%= @time_horizon.year_b %>
+</p>
+
+<p>
+  <strong>Year c:</strong>
+  <%= @time_horizon.year_c %>
+</p>
+
+<p>
+  <strong>Year d:</strong>
+  <%= @time_horizon.year_d %>
+</p>
+
+<%= link_to 'Edit', edit_time_horizon_path(@time_horizon) %> |
+<%= link_to 'Back', time_horizons_path %>

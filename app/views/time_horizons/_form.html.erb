@@ -1,0 +1,33 @@
+<%= form_for(@time_horizon) do |f| %>
+  <% if @time_horizon.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@time_horizon.errors.count, "error") %> prohibited this time_horizon from being saved:</h2>
+
+      <ul>
+      <% @time_horizon.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :year_a %><br>
+    <%= f.number_field :year_a %>
+  </div>
+  <div class="field">
+    <%= f.label :year_b %><br>
+    <%= f.number_field :year_b %>
+  </div>
+  <div class="field">
+    <%= f.label :year_c %><br>
+    <%= f.number_field :year_c %>
+  </div>
+  <div class="field">
+    <%= f.label :year_d %><br>
+    <%= f.number_field :year_d %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
